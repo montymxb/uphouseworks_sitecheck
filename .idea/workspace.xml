@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b9f1a90-52b3-4733-9fec-49de7392658c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bismuth_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bootstrap.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ciclo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/kaleid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lil.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/site_check.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tip.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/sitecheck-min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HowTo.html" afterPath="$PROJECT_DIR$/HowTo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bootstrap.jpg" afterPath="$PROJECT_DIR$/images/bootstrap.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/pop.jpg" afterPath="$PROJECT_DIR$/images/pop.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/tip.jpg" afterPath="$PROJECT_DIR$/images/tip.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="uphouseworks_sitecheck.iws" />
@@ -48,8 +40,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+            <state relative-caret-position="481">
+              <caret line="87" column="114" selection-start-line="87" selection-start-column="114" selection-end-line="87" selection-end-column="114" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -118,7 +110,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1213" />
+    <option name="width" value="1440" />
     <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -253,18 +245,18 @@
       <workItem from="1466575036210" duration="288000" />
       <workItem from="1466575923838" duration="1897000" />
       <workItem from="1466630538465" duration="2327000" />
-      <workItem from="1466810241396" duration="3323000" />
+      <workItem from="1466810241396" duration="3457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8566000" />
+    <option name="totallyTimeSpent" value="8700000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1213" height="797" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29678482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -471,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        <state relative-caret-position="481">
+          <caret line="87" column="114" selection-start-line="87" selection-start-column="114" selection-end-line="87" selection-end-column="114" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
