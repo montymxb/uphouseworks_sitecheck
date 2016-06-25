@@ -10,11 +10,35 @@
 <body>
 <div id="wrap">
     <h1 class="title">How to Build Tests for SiteCheck</h1>
-    <h2 class="section-title">What are Tests? (Not complete yet!!)</h2>
     <div class="section">
+        <h2>What are Tests?</h2>
         <p>
-            Tests are a way to quantify the structure of a site. Their structure is fairly straight forward.
-            They are at the core regular expressions, which are run against a site to generate a pass/fail.
+            Tests are a simply a way to test the structure of your website.
+            Running a test will either return a pass or fail result.
+            Additionally a message will be returned indicating the success of a test or detailing the reason why it failed.
+            <br/>
+            <br/>
+            At the core tests are simply regular expression.
+            If you're not familiar with the subject I would highly suggest reading up a bit <a href="www.regular-expressions.info">here</a>.
+            <br/>
+            <br/>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>What does a test look like?</h2>
+        <p>
+            Tests are provided in json format. A simple test would look something like this:
+            <code><br/>
+                {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"testId"	 : 1,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"name"		 : "Document Type",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"expression" : "!DOCTYPE\\s+html",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"description": "The HTML standard this page uses",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"image"		 : "http://www.clker.com/cliparts/W/A/h/a/P/D/check-mark-md.png",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"failure"	 : "A failure message"<br/>
+                }<br/>
+            </code>
         </p>
     </div>
 </div>
