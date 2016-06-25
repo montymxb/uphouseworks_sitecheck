@@ -1,0 +1,144 @@
+* {
+    font-weight: 100;
+    font-family: 'Avenir Next', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.title {
+    border: 2px #f0f0f0;
+    border-style: none none solid none;
+    margin: 32px;
+}
+
+.page-title {
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    padding: 8px;
+}
+
+.section-title {
+    color: #fff;
+    background: #6cf;
+    padding: 8px;
+    margin: 8px;
+}
+
+.page {
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.section {
+
+}
+
+#page1 {
+    /*max-width: 650px;*/
+    display: block;
+    margin: 0 auto 0 auto;
+    background-image: url("../images/pop.jpg");
+    background-size: cover;
+    height: 100vh;
+    min-height: 275px;
+}
+
+#page2 {
+    /*
+    background: url(../images/tip.jpg);
+    background-size: cover;
+    */
+}
+
+#page2inner {
+    background-color: rgba(255,255,255,0.75);
+    height: 100vh;
+    display: block;
+    margin: 0 auto 0 auto;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+#page3 {
+    background-image: url(../images/bootstrap.jpg);
+    background-size: cover;
+}
+
+#page4 {
+    /*background-image: url("../images/lil.png");*/
+    background-size: cover;
+}
+
+.float-wrapper {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: 8px auto 8px auto;
+}
+
+.float-item {
+    width: 200px;
+    height: 200px;
+    margin: 8px 16px 8px 16px;
+    padding: 16px;
+    display: inline-flex;
+    border: 2px solid #f0f0f0;
+    border-radius: 42px;
+    background-color: #fff;
+}
+
+.port1 {
+    background-image: url(../images/bootstrap.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port2 {
+    background-image: url(../images/tip.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port3 {
+    background-image: url(../images/bootstrap.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port4 {
+    background-image: url(../images/tip.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port5 {
+    background-image: url(../images/bootstrap.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port6 {
+    background-image: url(../images/tip.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
+
+.port7 {
+    background-image: url(../images/bootstrap.jpg);
+    background-size: 150%;
+    background-attachment: fixed;
+    display: inline-flex;
+}
