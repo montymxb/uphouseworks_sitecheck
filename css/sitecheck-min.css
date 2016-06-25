@@ -142,3 +142,30 @@
     background-attachment: fixed;
     display: inline-flex;
 }
+
+.side-by-side {
+    margin:8px;
+    padding:4px;
+}
+
+.side-by-side-left {
+    float:left;
+    width:45vw;
+}
+
+.side-by-side-right {
+    float:right;
+    width:45vw;
+}
+
+@media(max-width: 600px) {
+    .side-by-side-left {
+        float: none;
+        width: auto;
+    }
+
+    .side-by-side-right {
+        float: none;
+        width: auto;
+    }
+}
