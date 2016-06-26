@@ -1,0 +1,27 @@
+/*
+ * Code.css
+ *
+ * CSS for styling code tags
+ */
+
+code {
+    display: block;
+    font-family: Avenir, sans-serif;
+    font-size: 14px;
+    padding: 4px;
+    margin: 4px;
+    background: #fafafa;
+
+    border: 2px transparent;
+    border-style: none none solid none;
+
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+code:hover {
+    border-color: #6cf;
+}

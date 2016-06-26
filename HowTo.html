@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>Build SiteCheck Tests</title>
     <link href="css/sitecheck-min.css" rel="stylesheet"/>
+    <link href="css/Code.css" rel="stylesheet"/>
     <meta name="robots" content="index,follow,noodp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div id="wrap">
-    <h1 class="title">How to Build Tests for SiteCheck</h1>
     <div class="section">
+        <h1 class="title">How to Build Tests for SiteCheck</h1>
         <h2>What are Tests?</h2>
         <p>
             Tests are a simply a way to test the structure of your website.
@@ -18,8 +19,8 @@
             Additionally a message will be returned indicating the success of a test or detailing the reason why it failed.
             <br/>
             <br/>
-            At the core tests are simply regular expression.
-            If you're not familiar with the subject I would highly suggest reading up a bit <a href="www.regular-expressions.info">here</a>.
+            At the core, these tests are simply regular expressions.
+            If you're not familiar with the subject I would highly suggest reading up a bit <a href="http://www.regular-expressions.info" target="_blank">here</a>.
             <br/>
             <br/>
         </p>
@@ -29,16 +30,152 @@
         <h2>What does a test look like?</h2>
         <p>
             Tests are provided in json format. A simple test would look something like this:
-            <code><br/>
+            <code>
                 {<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;"testId"	 : 1,<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;"name"		 : "Document Type",<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;"expression" : "!DOCTYPE\\s+html",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;"description": "The HTML standard this page uses",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;"image"		 : "http://www.clker.com/cliparts/W/A/h/a/P/D/check-mark-md.png",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"description": "This site is using HTML5",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"image"		 : "http://sitecheck.uphouseworks.com/images/check.png",<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;"failure"	 : "A failure message"<br/>
                 }<br/>
             </code>
+            <br/>
+            <br/>
+            Fairly straight forward, but let's break this down a bit first.
+            <br/>
+            <br/>
+            <code>
+                "testId" : 1
+            </code>
+            The unique id of this test, can be anything you like!
+            Just be sure not to give two tests the same id.
+            <br/>
+            <br/>
+            <code>
+                "name" : "Document Type"
+            </code>
+            The name of this test to display to the user.
+            <br/>
+            <br/>
+            <code>
+                "expression" : "!DOCTYPE\\s+html"
+            </code>
+            The regular expression to run for this test.
+            Here we're simply checking for an HTML5 doctype, allowing one or more spaces between DOCTYPE and html.
+            <br/>
+            <br/>
+            <code>
+                "description" : "This site is using HTML5"
+            </code>
+            The description of this test. Generally a brief 1 - 2 line synopsis about what it means if this test passes.
+            <br/>
+            <br/>
+            <code>
+                "image" : "http://sitecheck.uphouseworks.com/images/check.png"
+            </code>
+            The pass image to show for this test.
+            A checkmark will do in almost all cases, but if you wish to provide your own 'pass' asset you can do so here.
+            <br/>
+            <br/>
+            <code>
+                "failure" : "A failure message"
+            </code>
+            The message to show when a test fails.
+            Generally a 1 - 3 line synopsis about why this is important to have and what you can do to fix it.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>How do I make my own tests?</h2>
+        <p>
+            To make your own suite you have to wrap your own tests as follows. The example here uses a couple tests in the default suite.
+            <code>
+                {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;"testCases": [<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"testId"	 : 1,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name"		 : "Document Type",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"expression" : "!DOCTYPE\\s+html",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "This site is using HTML5",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"image"		 : "http://sitecheck.uphouseworks.com/images/check.png",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"failure"	 : "This page does not use HTML5. You are either using an existing version of HTML or missing your DOCTYPE declaration."<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"testId"	 : 2,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"name"		 : "Language",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"expression" : "&lt;\\s*html.*lang\\s*=\\s*[\"'][^'\"]+[\"']",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"description": "Specifies the language this page is written for",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"image"		 : "http://sitecheck.uphouseworks.com/images/check.png",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"failure"	 : "Having this helps better declare what language this page supports when you intend to serve content in multiple languages"<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;]<br/>
+                }<br/>
+            </code>
+            <br/>
+            <br/>
+            Additionally, if you've used the app, you'll notice a version file is also referenced.
+            Every time SiteCheck runs a test it will check to see if the version file has changed, and if so will proceed to update, rather than downloading the entire test suite every time to check for changes.
+            <br/>
+            <br/>
+            You will need to create this version file and put something simple in it.
+            <code>
+                1
+            </code>
+            That's it, and in this case all we can keep track of how times we've changed our tests.
+            <br/>
+            <br/>
+            Note that you don't have to build a static file to perform this, you could instead create a server script file (ruby, php, node, etc.) which computes a hash of the local file and returns that for instance.
+            <br/>
+            <br/>
+            Finally, as you build your own tests it can be useful to leverage services like <a href="http://jsonlint.com/" target="_blank">JSON Lint</a> to check your json for errors.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>How do I use my tests?</h2>
+        <p>
+            To use your own tests you need to open up the SiteCheck app and access the settings.
+            You can find the settings by clicking the (• • •) at the bottom of the home page.
+            <div style="margin:4px auto 4px auto;text-align:center">
+                <img style="text-align:center" src="images/home.png" alt=""/>
+            </div>
+
+            Once you've arrived there you need to change your Test Suite URL and Test Suite Version URL to where you are currently hosting your tests.
+            <div style="margin:4px auto 4px auto;text-align:center">
+                <img style="text-align:center" src="images/settings.png" alt=""/>
+            </div>
+            <br/>
+            <br/>
+            That's about it! At this point you're all set and using your own test suite.
+            Now you can incorporate custom approaches to analyzing sites with the convenience of an app, enjoy!
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>FAQ</h2>
+        <h3>My tests won't change!</h3>
+        <p>
+            Make sure that you've changed <span style="font-style:italic">both</span> your <strong>Tests</strong> and <strong>Version</strong> urls.
+            <br/>
+            <br/>
+            If you still are having issues it is possible that your device has cached prior results for efficiency reasons.
+            In this case you may try force restarting the app, but most likely you will need to restart your device.
+            Ultimately be patient if this happens, it normally doesn't take too long for the device to request a new version of a cached resource.
+        </p>
+
+        <h3>My tests aren't working</h3>
+        <p>
+            Make sure that you've run your json tests through <a href="http://jsonlint.com/" target="_blank">JSON Lint</a> or a similar service to verify there isn't an error in your json.
+            If you're still having issues you will need to go over your json carefully, particularly regarding escaped characters.
+            For example trying to match whitespace, \s, will not work unless you are also escaping the slash.
+            A properly escaped instance would look like \\s.
+        </p>
+
+        <h3>I'm still having issues.</h3>
+        <p>
+            You can reach out to me at <a href="mailto:ben@axolsoft.com">ben@axolsoft.com</a>.
+            I'll see if I can't help out!
         </p>
     </div>
 </div>
