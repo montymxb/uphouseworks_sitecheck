@@ -1,4 +1,3 @@
 :: TODO for SiteCheck ::
 
-• To circumvent distribution issues focus on the United States for now, allowing TLS/SSL issues to remain exempt from export compliance
-
+• On the HowTo add urls to the original schema & version, in case someone wants to switch back.
