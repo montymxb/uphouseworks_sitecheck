@@ -58,8 +58,15 @@
     /*max-width: 650px;*/
     display: block;
     margin: 0 auto 0 auto;
+    /*
     background-image: url("../images/pop.jpg");
     background-size: cover;
+    */
+    background: #3af; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#6cf, #3af); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#6cf, #3af); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#6cf, #3af); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#6cf, #3af); /* Standard syntax */
     height: 100vh;
     min-height: 694px;
 }
@@ -69,10 +76,16 @@
     background: url(../images/tip.jpg);
     background-size: cover;
     */
+    background: #90f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#90f, #90a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#90f, #90a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#90f, #90a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#90f, #90a); /* Standard syntax */
+
+    min-height: 75vh;
 }
 
 #page2inner {
-    background-color: rgba(255,255,255,0.75);
     height: 100vh;
     display: block;
     margin: 0 auto 0 auto;
@@ -81,8 +94,17 @@
 }
 
 #page3 {
+    /*
     background-image: url(../images/bootstrap.jpg);
     background-size: cover;
+    */
+    background: #c93; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c93, #f33); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c93, #f33); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c93, #f33); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c93, #f33); /* Standard syntax */
+
+    min-height: 75vh;
 }
 
 #page4 {
@@ -167,6 +189,7 @@
 .side-by-side {
     margin:8px;
     padding:4px;
+    overflow: hidden;
 }
 
 .side-by-side-left {
@@ -179,6 +202,13 @@
     width:45vw;
 }
 
+.side-by-side-right h3 {
+    width: 290px;
+    margin-top: 50px;
+    font-size: 25px;
+    background: transparent;
+}
+
 @media(max-width: 600px) {
     .side-by-side-left {
         float: none;
@@ -188,5 +218,18 @@
     .side-by-side-right {
         float: none;
         width: auto;
+    }
+
+    .side-by-side-right h3 {
+        width: auto;
+        margin-top: 0;
+        font-size: 25px;
+        text-align: center;
+        background: transparent;
+    }
+
+    #page1 {
+        height: auto;
+        min-height: inherit;
     }
 }
