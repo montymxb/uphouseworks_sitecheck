@@ -113,6 +113,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port2 {
@@ -120,6 +121,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port3 {
@@ -127,6 +129,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port4 {
@@ -134,6 +137,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port5 {
@@ -141,6 +145,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port6 {
@@ -148,6 +153,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .port7 {
@@ -155,6 +161,7 @@
     background-size: 150%;
     background-attachment: fixed;
     display: inline-flex;
+    background-repeat: no-repeat;
 }
 
 .side-by-side {
