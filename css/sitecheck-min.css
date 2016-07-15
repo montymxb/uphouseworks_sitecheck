@@ -16,6 +16,47 @@
     margin: 32px;
 }
 
+/* Diamond Cut Start */
+.diamond-cut {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 200px;
+    height: 45px;
+    border-bottom: 45px solid #fff;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+}
+/* Diamond Cut End */
+
+#footer {
+    background: #f0f0f0;
+    padding: 8px;
+}
+
+#footer p {
+    margin: 8px;
+    padding: 8px;
+}
+
+#footer a {
+    margin: 2px;
+    padding: 2px;
+}
+
+/* GLOBAL LINK STYLING */
+a {
+    color: #030303;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+a:hover {
+    color: #33aaff;
+}
+/* End global link styling */
+
 .page-title {
     color: #fff;
     text-align: center;
