@@ -1,3 +1,3 @@
 :: TODO for SiteCheck ::
 
-• File for export complicance
+• File for export compliance
